@@ -1,0 +1,27 @@
+  <h1 *ngIf="successMessage" class="bg-Green"> {{successMessage}}</h1>
+  <form [formGroup]="form" (ngSubmit)="onSubmit()">
+    <div class="flex w-full justify-center p-8">
+      <div class="flex flex-col items-center  justify-center border border-black rounded  p-8 md:w-1/2">
+        <div class="flex justify-around w-full ">
+          <img src="https://cdn.iconscout.com/icon/free/png-256/free-back-arrow-1767507-1502574.png" class="w-8 h-8" alt="" [routerLink]="['/todo']">
+          <h1 class="3xl"> Add Todo</h1>
+      </div>
+      <div class="flex flex-col w-full mt-8">
+        <h1> Task Name</h1>
+        <input type="text"  formControlName="title" class=" rounded border-black border w-full p-2">
+      </div>
+    
+      <div class="flex flex-col w-full mt-8">
+        <h1> End Date</h1>
+        <input type="date" formControlName="endDate" class=" rounded border border-black w-full p-2">
+      </div>
+      <div class="flex flex-col w-full mt-8">
+        <h1> Description </h1>
+        <textarea name="" id="" formControlName="description" cols="10" rows="3" class=" rounded border border-black w-full p-2"></textarea>
+      </div>
+      <div>
+        <button type='submit' class="bg-background mt-10 py-2 px-4 text-white rounded ">Add Todo</button>
+      </div>
+      </div>
+    </div>
+  </form>
