@@ -1,0 +1,7 @@
+CREATE DATABASE Todos
+
+CREATE TABLE TodoTable(id VARCHAR(255) , title VARCHAR(2550) , 
+description VARCHAR(2550), 
+startDate VARCHAR(255) DEFAULT GETDATE(),
+completed VARCHAR(255) DEFAULT 'false' ,
+endDate VARCHAR(2550))
